@@ -30,10 +30,12 @@
 
 import { configureStore } from "@reduxjs/toolkit";
 import customerReducer from "../reducers/CustomerReducer";
+import ItemReducer from "../reducers/ItemReducer";
 
 const store = configureStore({
   reducer: {
     customer: customerReducer,
+    Item : ItemReducer,
   },
 });
 

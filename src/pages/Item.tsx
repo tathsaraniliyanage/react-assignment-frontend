@@ -1,6 +1,12 @@
 import React, { useState } from "react"
 import { Trash, Trash2 } from "react-feather"
 
+import { useDispatch, useSelector } from "react-redux";
+
+import { RootState, AppDispatch } from "../store/store";
+import { getItems, saveItem, deleteItem, updateItem } from "../reducers/ItemReducer";
+
+
 function Item() {
   const [items, setItems] = useState([
     { item_id: "I001", name: "Arduino Board", quantity: 10, price: 20.5 },
